@@ -1,0 +1,162 @@
+<!-- <div class="page-header" data-parallax="true" style="background-image: url('./assets/img/daniel-olahh.jpg');">
+    <div class="filter"></div>
+    <div class="container">
+        <div class="motto text-center">
+            <h1>Example page</h1>
+            <h3>Start designing your landing page here.</h3>
+            <br />
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="btn btn-outline-neutral btn-round"><i class="fa fa-play"></i>Watch video</a>
+            <button type="button" class="btn btn-outline-neutral btn-round">Download</button>
+        </div>
+    </div>
+</div> -->
+<div class="main">
+  <div class="section">
+    <div class="container mt-3">
+      <div class="row">
+        <div class="col-12 col-md-6 mr-auto ml-auto">
+          <h2 class="letter font-weight-bold black layoutitle">
+            La Ayuda que Necesitas, <br />
+            Donde lo necesitas
+          </h2>
+          <p class="letter mt-3 font-weight-bold black textlayout">
+            Ofrecemos soluciones a tus dispositivos móviles y computadores en la
+            puerta de tu casa, o si lo prefieres podremos solucionarlo
+            remotamente vía telefónica.
+          </p>
+          <br />
+          <button type="button" class="btn btn-lg btn-success btn-round">
+            Contáctanos
+          </button>
+        </div>
+        <div class="col-12 col-md-6">
+          <img
+            src="../../../assets/img/computers.png"
+            alt=""
+            style="width: 100%"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section text-center" style="background-color: #4388ed">
+    <div class="container">
+      <div class="row">
+        <div class="col-6 offset-3">
+          <h4 class="title font-weight-bold letter">
+            En 3 simples pasos podrás obtener <br />
+            <span class="font-weight-bold text-white"
+              >soluciones inmediatas,</span
+            >
+            en remoto o en la puerta de tu casa
+          </h4>
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col-md-4">
+          <div class="border border-white divcard" style="height: 250px">
+            <div class="text-center p-5">
+              <img src="../../../assets/img/Arte.png" alt="..." />
+            </div>
+
+            <h6 class="font-weight-bold letter text-white">
+              Comunícate con nosotros
+            </h6>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="border border-white divcard" style="height: 250px">
+            <div class="text-center p-5">
+              <img src="../../../assets/img/Arte.png" alt="..." />
+            </div>
+
+            <h6 class="font-weight-bold letter text-white">
+              Comunícate con nosotros
+            </h6>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="border border-white divcard" style="height: 250px">
+            <div class="text-center p-5">
+              <img src="../../../assets/img/Arte.png" alt="..." />
+            </div>
+
+            <h6 class="font-weight-bold letter text-white">
+              Comunícate con nosotros
+            </h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section landing-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 mr-auto ml-auto">
+          <h2 class="text-center">Keep in touch?</h2>
+          <form class="contact-form">
+            <div class="row">
+              <div class="col-md-6">
+                <label>Name</label>
+                <div
+                  class="input-group"
+                  [ngClass]="{ 'input-group-focus': focus === true }"
+                >
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"
+                      ><i class="nc-icon nc-single-02"></i
+                    ></span>
+                  </div>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Name"
+                    (focus)="focus = true"
+                    (blur)="focus = false"
+                  />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <label>Email</label>
+                <div
+                  class="input-group"
+                  [ngClass]="{ 'input-group-focus': focus1 === true }"
+                >
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">
+                      <i class="nc-icon nc-email-85"></i
+                    ></span>
+                  </div>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Email"
+                    (focus)="focus1 = true"
+                    (blur)="focus1 = false"
+                  />
+                </div>
+              </div>
+            </div>
+            <label>Message</label>
+            <textarea
+              class="form-control"
+              rows="4"
+              placeholder="Tell us your thoughts and feelings..."
+            ></textarea>
+            <div class="row">
+              <div class="col-md-4 mr-auto ml-auto">
+                <button class="btn btn-danger btn-lg btn-fill">
+                  Send Message
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
