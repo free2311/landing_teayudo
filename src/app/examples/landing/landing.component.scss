@@ -18,3 +18,20 @@
 .divcard {
   border-radius: 24px;
 }
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.message {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: 0em;
+  color: white;
+}
+
+.bg-green {
+  background-color: rgba(104, 224, 137, 1);
+}

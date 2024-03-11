@@ -69,11 +69,11 @@
         <div class="col-md-4">
           <div class="border border-white divcard" style="height: 250px">
             <div class="text-center p-5">
-              <img src="../../../assets/img/Arte.png" alt="..." />
+              <img src="../../../assets/img/headphones.png" alt="..." />
             </div>
 
             <h6 class="font-weight-bold letter text-white">
-              Comunícate con nosotros
+              Escuchamos tus necesidades
             </h6>
           </div>
         </div>
@@ -81,23 +81,117 @@
         <div class="col-md-4">
           <div class="border border-white divcard" style="height: 250px">
             <div class="text-center p-5">
-              <img src="../../../assets/img/Arte.png" alt="..." />
+              <img src="../../../assets/img/image1.png" alt="..." />
             </div>
 
             <h6 class="font-weight-bold letter text-white">
-              Comunícate con nosotros
+              Te brindamos una solución
             </h6>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-5">
+        <div class="col-12">
+          <div class="text-center">
+            <button type="button" class="btn btn-lg btn-success btn-round">
+              Contáctanos
+            </button>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="section landing-section">
+  <div class="section">
+    <div class="container mt-3">
+      <div class="row">
+        <div class="col-7 offset-5 mr-auto ml-auto">
+          <h2 class="letter font-weight-bold black layoutitle text-center">
+            El servicio que necesitas <br />
+            en la puerta de tu casa
+          </h2>
+        </div>
+      </div>
+
+      <div class="row mt-5">
+        <div
+          class="col-12 col-sm-12 col-md-3 col-lg-2 mb-2 mb-md-3 mb-lg-3"
+          *ngFor="let item of servicios"
+        >
+          <div class="text-center">
+            <app-buttonservice [name]="item.name"></app-buttonservice>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12" style="background-color: rgba(99, 213, 149, 1)">
+          <p class="letter message text-wrap text-left">
+            Servicio nacional | A un solo click podrás tener la ayuda que
+            necesitas para tu computador y cualquier dispositivo móvil.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="container p-0 p-md-5">
+      <div class="row">
+        <div class="col-6">
+          <h1 class="letter font-weight-bold black">Contáctenos</h1>
+          <br />
+          <p class="letter width400 mt-3">
+            No importa el problema, no importa el lugar
+            <span class="font-weight-bold width700">
+              ¡nosotros te ayudamos!</span
+            >
+          </p>
+
+          <div class="row">
+            <div class="col-12">
+              <div class="d-flex h-25">
+                <div>
+                  <img
+                    src="../../../assets/img/Arte.png"
+                    alt=""
+                    srcset=""
+                    width="75%"
+                  />
+                </div>
+                <div class="text-center">
+                  <h2 class="letter width700 ml-2">314 433 3458</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="mt-5" style="width: 50%">
+            <button
+              type="button"
+              class="btn btn-block btn-round border-0 bg-green"
+            >
+              ¡Llámanos!
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="section" style="background-color: #4388ed">
     <div class="container">
       <div class="row">
         <div class="col-md-8 mr-auto ml-auto">
-          <h2 class="text-center">Keep in touch?</h2>
+          <h2 class="letter font-weight-bold black width700">
+            ¿Prefieres que nosotros nos pongamos en contacto contigo?
+          </h2>
           <form class="contact-form">
             <div class="row">
               <div class="col-md-6">
@@ -158,5 +252,5 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 </div>
