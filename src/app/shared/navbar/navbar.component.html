@@ -78,16 +78,35 @@
           </a>
         </li> -->
         <li class="nav-item" *ngIf="!isDocumentation()">
-          <a class="nav-link text-dark" target="_blank"> Que hacemos</a>
+          <a
+            class="nav-link text-dark"
+            (click)="scrollToSection('hacemos')"
+            target="_blank"
+          >
+            Que hacemos</a
+          >
         </li>
         <li class="nav-item" *ngIf="!isDocumentation()">
-          <a class="nav-link text-dark" target="_blank"> Como lo hacemos</a>
+          <a
+            class="nav-link text-dark"
+            (click)="scrollToSection('seccion-como')"
+          >
+            Como lo hacemos</a
+          >
         </li>
         <li class="nav-item" *ngIf="!isDocumentation()">
-          <a class="nav-link text-dark" target="_blank"> Servicios</a>
+          <a class="nav-link text-dark" (click)="scrollToSection('servicios')">
+            Servicios</a
+          >
         </li>
         <li class="nav-item" *ngIf="!isDocumentation()">
-          <a s class="nav-link text-dark" target="_blank"> Contactanos</a>
+          <a
+            s
+            class="nav-link text-dark"
+            (click)="scrollToSection('contactanos')"
+          >
+            Contactanos</a
+          >
         </li>
         <!--  <li class="nav-item" *ngIf="isHome()">
           <a

@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { ScrollService } from "app/services/scroll.service";
 
 @Component({
   selector: "app-landing",
@@ -10,7 +11,7 @@ export class LandingComponent implements OnInit {
   focus1: any;
   servicios = [];
 
-  constructor() {
+  constructor(private scrollService: ScrollService) {
     this.servicios = [
       { name: "servicio1" },
       { name: "servicio2" },
@@ -27,5 +28,20 @@ export class LandingComponent implements OnInit {
     ];
   }
 
-  ngOnInit() {}
+  ngOnInit(): void {
+    this.scrollService.scrollRequested$.subscribe((sectionId) => {
+      this.scrollToSection(sectionId);
+    });
+  }
+
+  scrollToSection(sectionId: string) {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+        inline: "nearest",
+      });
+    }
+  }
 }

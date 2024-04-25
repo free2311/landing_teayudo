@@ -11,7 +11,7 @@
     </div>
 </div> -->
 <div class="main">
-  <div class="section">
+  <div class="section" id="hacemos">
     <div class="container mt-3">
       <div class="row">
         <div class="col-12 col-md-6 mr-auto ml-auto">
@@ -25,7 +25,11 @@
             remotamente vía telefónica.
           </p>
           <br />
-          <button type="button" class="btn btn-lg btn-success btn-round">
+          <button
+            type="button"
+            (click)="scrollToSection('contactanos')"
+            class="btn btn-lg btn-success btn-round"
+          >
             Contáctanos
           </button>
         </div>
@@ -40,7 +44,11 @@
     </div>
   </div>
 
-  <div class="section text-center" style="background-color: #4388ed">
+  <div
+    class="section text-center"
+    id="seccion-como"
+    style="background-color: #4388ed"
+  >
     <div class="container">
       <div class="row">
         <div class="col-6 offset-3">
@@ -94,7 +102,11 @@
       <div class="row mt-5">
         <div class="col-12">
           <div class="text-center">
-            <button type="button" class="btn btn-lg btn-success btn-round">
+            <button
+              type="button"
+              (click)="scrollToSection('contactanos')"
+              class="btn btn-lg btn-success btn-round"
+            >
               Contáctanos
             </button>
           </div>
@@ -103,7 +115,7 @@
     </div>
   </div>
 
-  <div class="section">
+  <div class="section" id="servicios">
     <div class="container mt-3">
       <div class="row">
         <div class="col-7 offset-5 mr-auto ml-auto">
@@ -140,7 +152,7 @@
     </div>
   </div>
 
-  <div class="section">
+  <div class="section" id="contactanos">
     <div class="container mt-0 pt-0">
       <div class="row">
         <div class="col-6">
@@ -185,7 +197,7 @@
     </div>
   </div>
 
-  <div class="section" style="background-color: #4388ed">
+  <div class="section" id="seccion-destino" style="background-color: #4388ed">
     <div class="container">
       <div class="row mb-5">
         <div class="col-md-12">
