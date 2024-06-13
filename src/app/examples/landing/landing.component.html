@@ -210,7 +210,7 @@
         </div>
       </div>
 
-      <form class="contact-form">
+      <form class="contact-form" [formGroup]="startServiceform">
         <div class="row">
           <div class="col-6">
             <div class="container-fluid pt-5">
@@ -229,23 +229,24 @@
                   type="text"
                   class="form-control rounded"
                   placeholder="Nombre"
+                  formControlName="name"
                 />
               </div>
             </div>
 
             <div class="row mt-3">
               <div class="col-6">
-                <input
-                  type="text"
-                  class="form-control rounded"
-                  placeholder="Télefono"
-                />
+                <app-numeric-input
+                  [label]="'telefono'"
+                  [control]="startServiceform.get('cellphone')"
+                ></app-numeric-input>
               </div>
               <div class="col-6">
                 <input
                   type="text"
                   class="form-control rounded"
                   placeholder="Correo"
+                  formControlName="email"
                 />
               </div>
             </div>
@@ -256,6 +257,7 @@
                   class="form-control rounded"
                   rows="4"
                   placeholder="Mensaje"
+                  formControlName="detail"
                 ></textarea>
               </div>
             </div>
@@ -266,6 +268,8 @@
                   <button
                     type="button"
                     class="btn btn-round border-0 bg-green w-25"
+                    [disabled]="startServiceform.invalid"
+                    (click)="sendData()"
                   >
                     Enviar
                   </button>
@@ -328,6 +332,8 @@
           </div>
         </div> -->
       </form>
+
+      <!-- <app-test></app-test> -->
     </div>
   </div>
 </div>

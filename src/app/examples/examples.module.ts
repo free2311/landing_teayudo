@@ -1,6 +1,6 @@
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
-import { FormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 
 import { LandingComponent } from "./landing/landing.component";
@@ -9,7 +9,7 @@ import { SignupComponent } from "./signup/signup.component";
 import { ComponentsModule } from "app/components/components.module";
 
 @NgModule({
-  imports: [CommonModule, FormsModule, NgbModule, ComponentsModule],
+  imports: [CommonModule, FormsModule, NgbModule, ComponentsModule, ReactiveFormsModule],
   declarations: [LandingComponent, SignupComponent, ProfileComponent],
 })
-export class ExamplesModule {}
+export class ExamplesModule { }

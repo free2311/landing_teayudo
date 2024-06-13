@@ -1,7 +1,7 @@
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
-import { FormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { NouisliderModule } from "ng2-nouislider";
 import { JwBootstrapSwitchNg2Module } from "jw-bootstrap-switch-ng2";
 import { RouterModule } from "@angular/router";
@@ -15,6 +15,8 @@ import { NotificationComponent } from "./notification/notification.component";
 import { NgbdModalComponent } from "./modal/modal.component";
 import { NgbdModalContent } from "./modal/modal.component";
 import { ButtonserviceComponent } from "./buttons/buttonservice/buttonservice.component";
+import { NumericInputComponent } from './input/numeric-input/numeric-input.component';
+import { TestComponent } from './test/test.component';
 
 @NgModule({
   imports: [
@@ -24,6 +26,7 @@ import { ButtonserviceComponent } from "./buttons/buttonservice/buttonservice.co
     NouisliderModule,
     RouterModule,
     JwBootstrapSwitchNg2Module,
+    ReactiveFormsModule
   ],
   declarations: [
     ComponentsComponent,
@@ -35,8 +38,10 @@ import { ButtonserviceComponent } from "./buttons/buttonservice/buttonservice.co
     NgbdModalComponent,
     NgbdModalContent,
     ButtonserviceComponent,
+    NumericInputComponent,
+    TestComponent,
   ],
   entryComponents: [NgbdModalContent],
-  exports: [ComponentsComponent, ButtonserviceComponent],
+  exports: [ComponentsComponent, ButtonserviceComponent, NumericInputComponent, TestComponent],
 })
-export class ComponentsModule {}
+export class ComponentsModule { }

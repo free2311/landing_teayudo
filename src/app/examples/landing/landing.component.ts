@@ -1,5 +1,9 @@
 import { Component, OnInit } from "@angular/core";
+import { FormBuilder, FormGroup, Validators } from "@angular/forms";
+import { ApiserviceService } from "app/services/apiservice.service";
+import Swal from "sweetalert2";
 import { ScrollService } from "app/services/scroll.service";
+import { SwalServiceService } from "app/services/swal-service.service";
 
 @Component({
   selector: "app-landing",
@@ -11,7 +15,14 @@ export class LandingComponent implements OnInit {
   focus1: any;
   servicios = [];
 
-  constructor(private scrollService: ScrollService) {
+  startServiceform: FormGroup;
+
+  constructor(
+    private scrollService: ScrollService,
+    private fb: FormBuilder,
+    private apiservice: ApiserviceService,
+    private swalservice: SwalServiceService
+  ) {
     this.servicios = [
       { name: "servicio1" },
       { name: "servicio2" },
@@ -32,6 +43,20 @@ export class LandingComponent implements OnInit {
     this.scrollService.scrollRequested$.subscribe((sectionId) => {
       this.scrollToSection(sectionId);
     });
+    this.startServiceform = this.fb.group({
+      name: ["", Validators.required],
+      cellphone: ["", Validators.required],
+      email: [
+        "",
+        [
+          Validators.required,
+          Validators.pattern(
+            /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
+          ),
+        ],
+      ],
+      detail: ["", Validators.required],
+    });
   }
 
   scrollToSection(sectionId: string) {
@@ -43,5 +68,29 @@ export class LandingComponent implements OnInit {
         inline: "nearest",
       });
     }
+  }
+
+  public sendData() {
+    console.log("====================================");
+    console.log(this.startServiceform.value);
+    console.log("====================================");
+    const loading = this.swalservice.getLoading();
+    this.apiservice
+      .post("tickets/create", this.startServiceform.value)
+      .subscribe(
+        (response: any) => {
+          console.log(response);
+
+          loading.close();
+          if (response.status == true) {
+            this.swalservice.showMessage(response?.message);
+          }
+        },
+        (error: any) => {
+          console.log(error);
+          loading.close();
+          this.swalservice.showMessage(error?.error, "info");
+        }
+      );
   }
 }
